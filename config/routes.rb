@@ -1,5 +1,6 @@
 Ghint::Application.routes.draw do
 
+  get 'redirect' => "home#redirect"
 
   root :to => "home#index"
   devise_for :users

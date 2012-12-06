@@ -3,12 +3,12 @@
 Devise.setup do |config|
   # ==> LDAP Configuration 
   config.ldap_logger = true
-  config.ldap_create_user = false
+  config.ldap_create_user = true
   config.ldap_update_password = false
   # config.ldap_config = "#{Rails.root}/config/ldap.yml"
   # config.ldap_check_group_membership = false
   # config.ldap_check_attributes = false
-  # config.ldap_use_admin_to_bind = false
+  config.ldap_use_admin_to_bind = true
   # config.ldap_ad_group_check = false
   
   # ==> Mailer Configuration
@@ -33,7 +33,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [ :email ]
+  config.authentication_keys = [ :username ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the

@@ -20,13 +20,14 @@ authorizations: &AUTHORIZATIONS
 
 ## Enviornments
 
+# http://blog.stuartlewis.com/2008/07/07/test-ldap-service/
 development:
-  host: localhost
+  host: ldap.testathon.net
   port: 389
   attribute: cn
-  base: ou=people,dc=test,dc=com
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
+  base: ou=users,dc=testathon,dc=net
+  admin_user: cn=stuart,ou=users,dc=testathon,dc=net
+  admin_password: stuart
   ssl: false
   # <<: *AUTHORIZATIONS
 

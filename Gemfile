@@ -8,6 +8,7 @@ gem 'devise_ldap_authenticatable'
 gem 'quiet_assets', ">= 1.0.1", :group => :development
 gem 'bootstrap-sass', ">= 2.1.0.0"
 gem 'simple_form', ">= 2.0.3"
+gem 'rest-client', ">= 1.6.7"
 
 # Gems used only for assets and not required in production environments by default.
 group :assets do
