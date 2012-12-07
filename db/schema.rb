@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205231555) do
+ActiveRecord::Schema.define(:version => 20121207145051) do
+
+  create_table "github_users", :force => true do |t|
+    t.string   "login",         :null => false
+    t.integer  "gh_id",         :null => false
+    t.string   "url",           :null => false
+    t.string   "html_url",      :null => false
+    t.string   "name",          :null => false
+    t.string   "location",      :null => false
+    t.string   "email",         :null => false
+    t.datetime "gh_created_at", :null => false
+    t.integer  "public_repos",  :null => false
+    t.integer  "private_repos", :null => false
+    t.integer  "user_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",              :default => "", :null => false
