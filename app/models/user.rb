@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :ldap_authenticatable, :trackable, :validatable
 
+  has_one :github_user
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :username
 
