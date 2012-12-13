@@ -3,7 +3,7 @@
     <ul class="nav nav-list">
       <li class="nav-header">Gravatar</li>
       <li>
-
+        <%= image_tag @gh_user.avatar_url, :class => 'img-polaroid' %>
       </li>
 
       <li class="nav-header">Actions</li>
@@ -36,6 +36,10 @@
       <tr>
         <td>User HTML URL</td>
         <td><a href="<%= @gh_user.html_url %>"><%= @gh_user.html_url %></a></td>
+      </tr>
+      <tr>
+        <td>Gravatar URL</td>
+        <td><a href="<%= @gh_user.avatar_url %>">URI</a></td>
       </tr>
       <tr>
         <td>Name</td>

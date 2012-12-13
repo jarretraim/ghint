@@ -22,6 +22,7 @@ class GithubUsersController < ApplicationController
       gh_user.gh_created_at = user[:created_at]
       gh_user.public_repos = user[:public_repos]
       gh_user.private_repos = user[:total_private_repos]
+      gh_user.avatar_url = user[:avatar_url]
       gh_user.user = current_user
       gh_user.save
     end
