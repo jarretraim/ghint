@@ -1,29 +1,2 @@
 <h1>Welcome, <%=  current_user.username %>!</h1>
 
-
-<table>
-  <tr>
-    <td>Client ID</td>
-    <td><%= @gh_vars[:client_id] %></td>
-  </tr>
-  <tr>
-    <td>Redirect URI</td>
-    <td><%= @gh_vars[:redirect_uri] %></td>
-  </tr>
-  <tr>
-    <td>Scope</td>
-    <td><%= @gh_vars[:scope] %></td>
-  </tr>
-  <tr>
-    <td>State</td>
-    <td><%= @gh_vars[:state] %></td>
-  </tr>
-  <tr>
-    <td>GitHub Link</td>
-    <td>
-      <a href="<%= @gh_uri  %>"><%= @gh_uri %></a>
-    </td>
-  </tr>
-
-</table>
-

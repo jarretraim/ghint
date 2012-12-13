@@ -1,6 +1,10 @@
 Ghint::Application.routes.draw do
 
-  get 'redirect' => "home#redirect"
+  resources :github_users do
+    collection do
+      get 'redirect'
+    end
+  end
 
   root :to => "home#index"
   devise_for :users
