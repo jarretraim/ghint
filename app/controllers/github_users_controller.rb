@@ -1,7 +1,7 @@
 class GithubUsersController < ApplicationController
 
   def show
-
+    @gh_user = current_user.github_user
   end
 
   def redirect

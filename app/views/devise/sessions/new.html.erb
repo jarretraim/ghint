@@ -38,6 +38,7 @@
 
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-signin' }) do |f| %>
     <h2 class="form-signing-heading">RAX SSO</h2>
+    <%= render 'layouts/messages' %>
     <%= f.input :username, :autofocus => true %>
     <%= f.input :password %>
     <%= f.button :submit, "Sign in", :class => 'btn-primary' %>

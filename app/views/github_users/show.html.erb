@@ -1,0 +1,70 @@
+<div class="span3">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Gravatar</li>
+      <li>
+
+      </li>
+
+      <li class="nav-header">Actions</li>
+      <li>
+        <button class="btn btn-primary btn-large" style="width: 100%" id="update_github_user">Update User</button>
+      </li>
+      <li style="padding-top: 15px;">
+        <button class="btn btn-medium" style="width: 100%" id="unlink_github_user">Unlink Github User</button>
+      </li>
+    </ul>
+  </div><!--/.well -->
+</div>
+
+
+<div class="span9">
+  <table class="table table-bordered table-striped">
+    <tbody>
+      <tr>
+        <td>Github Login</td>
+        <td><%= @gh_user.login %></td>
+      </tr>
+      <tr>
+        <td>Github ID</td>
+        <td><%= @gh_user.gh_id %></td>
+      </tr>
+      <tr>
+        <td>User API URL</td>
+        <td><a href="<%= @gh_user.url %>"><%= @gh_user.url %></a></td>
+      </tr>
+      <tr>
+        <td>User HTML URL</td>
+        <td><a href="<%= @gh_user.html_url %>"><%= @gh_user.html_url %></a></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><%= @gh_user.name %></td>
+      </tr>
+      <tr>
+        <td>Github Location</td>
+        <td><%= @gh_user.location %></td>
+      </tr>
+      <tr>
+        <td>Github Primary Email</td>
+        <td><%= @gh_user.email %></td>
+      </tr>
+      <tr>
+        <td>Created At</td>
+        <td><%= @gh_user.gh_created_at %></td>
+      </tr>
+      <tr>
+        <td>Private Repositories</td>
+        <td><%= @gh_user.private_repos %></td>
+      </tr>
+      <tr>
+        <td>Public Repositories</td>
+        <td><%= @gh_user.public_repos %></td>
+      </tr>
+      <tr>
+        <td>Last Updated</td>
+        <td><%= @gh_user.updated_at %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
