@@ -5,7 +5,7 @@ class HomeControllerTest < ActionController::TestCase
     sign_in :user, users(:valid)
 
     get :index
-    assert_response :success
+    assert_response :redirect
   end
 
 end
