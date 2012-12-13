@@ -11,11 +11,17 @@ gem 'simple_form', ">= 2.0.3"
 gem 'rest-client', ">= 1.6.7"
 gem 'github_api'
 gem 'sidekiq'
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 # Gems used only for assets and not required in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'

@@ -33,6 +33,12 @@ GEM
     bootstrap-sass (2.2.1.1)
       sass (~> 3.2)
     builder (3.0.4)
+    capistrano (2.13.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     celluloid (0.12.3)
       facter (>= 1.6.12)
       timers (>= 1.0.0)
@@ -58,6 +64,7 @@ GEM
       nokogiri (~> 1.5.2)
       oauth2
     hashie (1.2.0)
+    highline (1.6.15)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.1)
@@ -76,6 +83,13 @@ GEM
     multi_json (1.4.0)
     multipart-post (1.1.5)
     net-ldap (0.2.2)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.6.2)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
     nokogiri (1.5.5)
     oauth2 (0.8.0)
       faraday (~> 0.8)
@@ -84,6 +98,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.2)
     orm_adapter (0.4.0)
+    pg (0.14.1)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
@@ -117,6 +132,8 @@ GEM
       redis (~> 3.0.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -155,13 +172,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (>= 2.1.0.0)
+  capistrano
   devise (>= 2.1.2)
   devise_ldap_authenticatable
   github_api
   jquery-rails
+  pg
   quiet_assets (>= 1.0.1)
   rails (= 3.2.9)
   rest-client (>= 1.6.7)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   sidekiq
   simple_form (>= 2.0.3)
