@@ -27,7 +27,7 @@ namespace :deploy do
   end
 end
 
-before "deploy:restart", "deploy:symlink_shared"
+after "deploy:update", "deploy:symlink_shared"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
