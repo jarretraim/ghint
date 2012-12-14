@@ -7,18 +7,18 @@
 <%= link_to "Ghint", root_path, :class => 'brand' %>
 
 <div class="nav-collapse collapse">
-  <p class="navbar-text pull-right">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <p class="navbar-text pull-right">
       <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
-    <% end %>
-  </p>
-  <ul class="nav">
-    <li><a href="/">Home</a></li>
-    <% unless current_user.github_user.nil? %>
-      <li><%= link_to "Github User", github_user_path(current_user.github_user) %></li>
-    <% end %>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    </p>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <% unless current_user.github_user.nil? %>
+        <li><%= link_to "Github User", github_user_path(current_user.github_user) %></li>
+      <% end %>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  <% end %>
 </div><!--/.nav-collapse -->
 
 
