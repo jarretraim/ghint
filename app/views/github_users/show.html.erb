@@ -7,11 +7,11 @@
       </li>
 
       <li class="nav-header">Actions</li>
-      <li>
-        <button class="btn btn-primary btn-large" style="width: 100%" id="update_github_user">Update User</button>
+      <li style="padding-top: 15px;">
+        <%= link_to "Unlink User", @gh_user, method: :delete, :class => "btn btn-medium", :style => "width: 100%" %>
       </li>
       <li style="padding-top: 15px;">
-        <button class="btn btn-medium" style="width: 100%" id="unlink_github_user">Unlink Github User</button>
+        <%= link_to "View Permissions", root_path, :class => "btn btn-medium", :style => "width: 100%" %>
       </li>
     </ul>
   </div><!--/.well -->
@@ -39,7 +39,7 @@
       </tr>
       <tr>
         <td>Gravatar URL</td>
-        <td><a href="<%= @gh_user.avatar_url %>">URI</a></td>
+        <td><a href="<%= @gh_user.avatar_url %>"><%= truncate @gh_user.avatar_url, :length => 100 %></a></td>
       </tr>
       <tr>
         <td>Name</td>

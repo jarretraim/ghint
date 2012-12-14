@@ -4,6 +4,11 @@ class GithubUsersController < ApplicationController
     @gh_user = current_user.github_user
   end
 
+  def destroy
+    current_user.github_user.delete
+    redirect_to :action => 'new'
+  end
+
   def redirect
     github = Github.new :client_id => ENV['GH_CLIENT_ID'], :client_secret => ENV['GH_CLIENT_SECRET']
     token = github.get_token(params[:code])
