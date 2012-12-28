@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213135306) do
+ActiveRecord::Schema.define(:version => 20121223192627) do
 
   create_table "github_users", :force => true do |t|
     t.string   "login",         :null => false
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(:version => 20121213135306) do
     t.datetime "updated_at",    :null => false
     t.string   "avatar_url"
   end
+
+  create_table "terminations", :force => true do |t|
+    t.string   "uuid"
+    t.datetime "updated"
+    t.string   "username"
+    t.string   "fullname"
+    t.string   "manager"
+    t.string   "location"
+    t.string   "term_date"
+    t.string   "processed_by"
+  end
+
+  add_index "terminations", ["updated"], :name => "index_terminations_on_updated"
+  add_index "terminations", ["uuid"], :name => "index_terminations_on_uuid", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",              :default => "", :null => false

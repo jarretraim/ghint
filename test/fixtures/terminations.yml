@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uuid: MyString
+  username: MyString
+  fullname: MyString
+  manager: MyString
+  location: MyString
+  term_date: MyString
+  processed_by: MyString
+
+two:
+  uuid: MyString
+  username: MyString
+  fullname: MyString
+  manager: MyString
+  location: MyString
+  term_date: MyString
+  processed_by: MyString
