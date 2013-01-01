@@ -1,19 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  uuid: MyString
-  username: MyString
-  fullname: MyString
-  manager: MyString
-  location: MyString
-  term_date: MyString
-  processed_by: MyString
-
-two:
-  uuid: MyString
-  username: MyString
-  fullname: MyString
-  manager: MyString
-  location: MyString
-  term_date: MyString
-  processed_by: MyString
+  uuid: uri:urn:92caed5d-85e0-47ef-b7df-64d131155261
+  username: username
+  fullname: Full Name
+  manager: Another Name
+  location: San Antonio - TX
+  term_date: 3/2/12
+  processed_by: Person Name
