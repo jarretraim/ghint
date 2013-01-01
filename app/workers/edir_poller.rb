@@ -46,6 +46,8 @@ class EdirPoller
         term.uuid = e["id"]
         term.updated = DateTime.parse e["updated"]
         term.save
+
+        RemoveUser.remove term.username
       end
     end
 
