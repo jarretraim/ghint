@@ -4,4 +4,6 @@ GH_CLIENT_ID: github-client-id
 GH_CLIENT_SECRET: github-secret
 GH_USERNAME: username-for-github-account
 GH_PASSWORD: password-for-github-account
+PG_USERNAME: postgresql-username
+PG_PASSWORD: postgresql-password
 RESTCLIENT_LOG: log-file-for-rest-client
