@@ -10,7 +10,14 @@ class RemoveUser
 
     user = User.find_by_username(sso)
 
-    if user.nil? || user.github_user.nil?
+    # Don't konw the user at all
+    if user.nil?
+      puts "ERROR: SSO #{sso} is not a known Ghint user."
+      return
+    end
+
+    # User logged in, but didn't associate a GH account
+    if user.github_user.nil?
       puts "ERROR: SSO #{sso} is not mapped to a user in Ghint - nothing to remove."
       return
     end
