@@ -2,4 +2,6 @@ RACKER_APP_USERNAME: username-for-racker-app-feed
 RACKER_APP_PASSWORD: password-for-racker-app-feed
 GH_CLIENT_ID: github-client-id
 GH_CLIENT_SECRET: github-secret
+GH_USERNAME: username-for-github-account
+GH_PASSWORD: password-for-github-account
 RESTCLIENT_LOG: log-file-for-rest-client
