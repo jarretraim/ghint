@@ -48,5 +48,5 @@ production:
   base: <%= ENV['LDAP_BASE'] %>
   admin_user: <%= ENV['LDAP_USERNAME'] %>
   admin_password: <%= ENV['LDAP_PASSWORD'] %>
-  ssl: false
+  ssl: simple_tls
   # <<: *AUTHORIZATIONS
