@@ -32,6 +32,9 @@ class GithubUsersController < ApplicationController
       gh_user.save
     end
 
+    # Add the user to the standard 'All Rackers group'
+    AddUser.add current_user.username
+
     redirect_to :action => 'show', :id => g.id
   end
 
