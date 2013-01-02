@@ -23,7 +23,7 @@ production:
   database: ghint_production
   encoding: unicode
   host: localhost
-  username: <%= ENV['PG_USER'] %>
+  username: <%= ENV['PG_USERNAME'] %>
   password: <%= ENV['PG_PASSWORD'] %>
   timeout: 5000
 

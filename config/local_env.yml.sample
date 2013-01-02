@@ -6,4 +6,9 @@ GH_USERNAME: username-for-github-account
 GH_PASSWORD: password-for-github-account
 PG_USERNAME: postgresql-username
 PG_PASSWORD: postgresql-password
+LDAP_HOST: internal-ldap-hostname
+LDAP_ATTRIBUTE: internal-ldap-attribute
+LDAP_BASE: internal-ldap-base-dn
+LDAP_USERNAME: internal-ldap-admin-username
+LDAP_PASSWORD: internal-ldap-admin-password
 RESTCLIENT_LOG: log-file-for-rest-client

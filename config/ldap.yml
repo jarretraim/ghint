@@ -42,11 +42,11 @@ test:
   # <<: *AUTHORIZATIONS
 
 production:
-  host: localhost
+  host: <%= ENV['LDAP_HOST'] %>
   port: 636
-  attribute: cn
-  base: ou=people,dc=test,dc=com
-  admin_user: cn=admin,dc=test,dc=com
-  admin_password: admin_password
+  attribute: <%= ENV['LDAP_ATTRIBUTE'] %>
+  base: <%= ENV['LDAP_BASE'] %>
+  admin_user: <%= ENV['LDAP_USERNAME'] %>
+  admin_password: <%= ENV['LDAP_PASSWORD'] %>
   ssl: start_tls
   # <<: *AUTHORIZATIONS
