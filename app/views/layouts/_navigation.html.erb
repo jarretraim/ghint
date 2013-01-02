@@ -16,7 +16,6 @@
       <% unless current_user.github_user.nil? %>
         <li><%= link_to "Github User", github_user_path(current_user.github_user) %></li>
       <% end %>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   <% end %>
 </div><!--/.nav-collapse -->
