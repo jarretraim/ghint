@@ -3,6 +3,7 @@ set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 require 'whenever/capistrano'
+require 'sidekiq/capistrano'
 
 set :application, "ghint"
 set :repository,  "git://github.com/jarretraim/ghint.git"
