@@ -9,8 +9,14 @@ set :output, "log/background.log"
 
 every 5.minutes do
   runner "EdirPoller.update_feed"
-  #command 'echo "Stuff"'
 end
+
+every 1.day do
+  runner "UnlinkedUsers.generate_report"
+end
+
+
+
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
