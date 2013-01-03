@@ -15,6 +15,10 @@ every 1.day do
   runner "UnlinkedUsers.generate_report"
 end
 
+every 1.hour do
+  runner "ReadOnlyRepos.sync_repos"
+end
+
 
 
 #
