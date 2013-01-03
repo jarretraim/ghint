@@ -35,6 +35,7 @@ class GithubUsersController < ApplicationController
     # Add the user to the standard 'All Rackers group'
     AddUser.add current_user.username
 
+    flash[:notice] = "Your Github and Rackspace accounts are now linked. Your account will now be added to the 'All Rackers' group in Github."
     redirect_to :action => 'show', :id => g.id
   end
 
