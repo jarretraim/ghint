@@ -12,15 +12,18 @@ class ReadOnlyRepos
     teams = github.orgs.teams.list "rackspace"
     all_rackers = teams.find { |t| t["name"] == 'All Rackers' }
 
-    repositories = github.repos.list :org => 'rackspace'
-    logger.debug "There are #{repositories.count} repositories in the rackspace organization."
+    result = github.repos.list :org => 'rackspace'
 
-    repositories.each do |r|
+    while result.has_next_page?
 
-      unless github.orgs.teams.team_repo?(all_rackers["id"], "rackspace", r["name"])
-        github.orgs.teams.add_repo(all_rackers["id"], 'rackspace', r['name'])
-        logger.info "Added repository #{r["name"]} to 'All Rackers' team in the rackspace organization."
+      result.each do |r|
+        unless github.orgs.teams.team_repo?(all_rackers["id"], "rackspace", r["name"])
+          github.orgs.teams.add_repo(all_rackers["id"], 'rackspace', r['name'])
+          logger.info "Added repository #{r["name"]} to 'All Rackers' team in the rackspace organization."
+        end
       end
+
+      result = result.next_page
     end
   end
 end
